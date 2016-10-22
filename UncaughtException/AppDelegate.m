@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LJCaughtException.h"
+
 
 @interface AppDelegate ()
 
@@ -15,7 +17,9 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [LJCaughtException setDefaultHandler];
     // Override point for customization after application launch.
     return YES;
 }

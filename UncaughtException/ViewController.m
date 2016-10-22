@@ -26,4 +26,10 @@
 }
 
 
+- (IBAction)btnClickedCrash:(id)sender {
+    
+    NSArray *aryCrash = @[@"Crash1",@"Crash2"];
+    NSString *str = aryCrash[2];
+    NSLog(@"str = %@",str);
+}
 @end

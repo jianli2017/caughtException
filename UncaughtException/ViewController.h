@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)btnClickedCrash:(id)sender;
 
 @end
 

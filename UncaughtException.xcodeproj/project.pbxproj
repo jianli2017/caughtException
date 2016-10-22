@@ -13,6 +13,9 @@
 		302CA2FC1DB7450B00946C6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302CA2FA1DB7450B00946C6E /* Main.storyboard */; };
 		302CA2FE1DB7450B00946C6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302CA2FD1DB7450B00946C6E /* Assets.xcassets */; };
 		302CA3011DB7450B00946C6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302CA2FF1DB7450B00946C6E /* LaunchScreen.storyboard */; };
+		302CA30B1DB74AB200946C6E /* LJCaughtException.m in Sources */ = {isa = PBXBuildFile; fileRef = 302CA30A1DB74AB200946C6E /* LJCaughtException.m */; };
+		302CA30E1DB74DA100946C6E /* LJCrashInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 302CA30D1DB74DA100946C6E /* LJCrashInfoModel.m */; };
+		30F3F5A31DB7769400090727 /* LHCrashTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F3F5A21DB7769400090727 /* LHCrashTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		302CA2FD1DB7450B00946C6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		302CA3001DB7450B00946C6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		302CA3021DB7450B00946C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		302CA3091DB74AB200946C6E /* LJCaughtException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCaughtException.h; sourceTree = "<group>"; };
+		302CA30A1DB74AB200946C6E /* LJCaughtException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCaughtException.m; sourceTree = "<group>"; };
+		302CA30C1DB74DA100946C6E /* LJCrashInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCrashInfoModel.h; sourceTree = "<group>"; };
+		302CA30D1DB74DA100946C6E /* LJCrashInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCrashInfoModel.m; sourceTree = "<group>"; };
+		30F3F5A11DB7769400090727 /* LHCrashTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHCrashTool.h; sourceTree = "<group>"; };
+		30F3F5A21DB7769400090727 /* LHCrashTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHCrashTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		302CA2F01DB7450B00946C6E /* UncaughtException */ = {
 			isa = PBXGroup;
 			children = (
+				302CA3081DB74A8C00946C6E /* caughtException */,
 				302CA2F41DB7450B00946C6E /* AppDelegate.h */,
 				302CA2F51DB7450B00946C6E /* AppDelegate.m */,
 				302CA2F71DB7450B00946C6E /* ViewController.h */,
@@ -77,6 +87,19 @@
 				302CA2F21DB7450B00946C6E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		302CA3081DB74A8C00946C6E /* caughtException */ = {
+			isa = PBXGroup;
+			children = (
+				302CA3091DB74AB200946C6E /* LJCaughtException.h */,
+				302CA30A1DB74AB200946C6E /* LJCaughtException.m */,
+				302CA30C1DB74DA100946C6E /* LJCrashInfoModel.h */,
+				302CA30D1DB74DA100946C6E /* LJCrashInfoModel.m */,
+				30F3F5A11DB7769400090727 /* LHCrashTool.h */,
+				30F3F5A21DB7769400090727 /* LHCrashTool.m */,
+			);
+			path = caughtException;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,7 +133,8 @@
 				TargetAttributes = {
 					302CA2ED1DB7450B00946C6E = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = KYACQ4K486;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -150,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302CA30E1DB74DA100946C6E /* LJCrashInfoModel.m in Sources */,
 				302CA2F91DB7450B00946C6E /* ViewController.m in Sources */,
 				302CA2F61DB7450B00946C6E /* AppDelegate.m in Sources */,
+				30F3F5A31DB7769400090727 /* LHCrashTool.m in Sources */,
 				302CA2F31DB7450B00946C6E /* main.m in Sources */,
+				302CA30B1DB74AB200946C6E /* LJCaughtException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +226,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: qu bo (7D746A58F2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -247,7 +275,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: qu bo (7D746A58F2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -272,10 +301,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KYACQ4K486;
 				INFOPLIST_FILE = UncaughtException/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-1.UncaughtException";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gome.gomeEShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "30b7293d-9682-4f6e-858c-5b326c8fde62";
+				PROVISIONING_PROFILE_SPECIFIER = Dev_GM_GomeEShop;
 			};
 			name = Debug;
 		};
@@ -283,10 +316,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KYACQ4K486;
 				INFOPLIST_FILE = UncaughtException/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-1.UncaughtException";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gome.gomeEShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "30b7293d-9682-4f6e-858c-5b326c8fde62";
+				PROVISIONING_PROFILE_SPECIFIER = Dev_GM_GomeEShop;
 			};
 			name = Release;
 		};
@@ -309,6 +346,7 @@
 				302CA3071DB7450B00946C6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
